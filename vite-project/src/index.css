@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'monument-extended-regular';
+  src: url('./fonts/MonumentExtended-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-primary: #FBE502;
+  --color-secondary: #17A15F;
+  --color-warning: #FB0202;
+  --breakpoint-vxs: 425px;
+  --breakpoint-xs: 30rem;
+}
+
+/* --- CSS Kustom untuk Scrolling Banner --- */
+
+/* 1. Definisikan Keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Pindahkan sejauh -50% dari lebar total (karena ada 2 salinan) */
+    transform: translateX(-50%);
+  }
+}
+
+/* 2. Buat class untuk menerapkan animasi dasar */
+.logo-scroll-animation {
+  /* Terapkan keyframes 'scroll' */
+  animation-name: scroll;
+  /* Kecepatan konstan */
+  animation-timing-function: linear;
+  /* Berulang tanpa henti */
+  animation-iteration-count: infinite;
+  /* Durasi akan diatur via inline style di React, tapi bisa set default di sini jika mau */
+  /* animation-duration: 25s; */ /* Contoh jika ingin default, tapi kita override */
+
+  /* Anda bisa juga menggabungkannya dalam satu properti 'animation' */
+  /* animation: scroll linear infinite; */ /* Durasi tetap di-override inline style */
+}
+
+/* 2. Definisikan Kelas Utility Animasi */
+/* Sebaiknya gunakan @layer utilities agar konsisten dengan Tailwind */
+@layer utilities {
+  .animate-marquee-horizontal {
+    /* Terapkan animasi: nama, durasi (default bisa dihapus jika selalu pakai inline style),
+       timing function, iteration count */
+    /* animation-duration BISA di-override oleh inline style di React */
+    animation: marquee-horizontal linear infinite;
+    /* Anda bisa set default duration di sini jika mau, tapi inline style lebih fleksibel */
+    /* animation-duration: 40s; */
+  }
+}
