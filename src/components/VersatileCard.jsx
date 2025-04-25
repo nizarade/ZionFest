@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 // Komponen Card Serbaguna
 const VersatileCard = ({
+  onClick,
   variant = "contentBelow", // 'imageOnly' atau 'contentBelow'
   imageUrl,
   altText = "Deskripsi gambar",
@@ -16,10 +18,13 @@ const VersatileCard = ({
   imageHeightClass = "h-48", // Kelas tinggi gambar (bisa di-override)
   children, // Konten tambahan (opsional)
 }) => {
+
+  const navigate = useNavigate();
   // ---- Gaya untuk Variant 'imageOnly' (Seperti contoh pertama) ----
   if (variant === "imageOnly") {
     return (
       <div
+        onClick={()=>navigate(`/tickets/${onClick}`)}
         className={`
           rounded-lg             
         overflow-hidden   
@@ -107,7 +112,11 @@ const VersatileCard = ({
 
           {/* Tombol */}
           {buttonText && (
-            <Button textColor="text-black" bgColor="bg-secondary">
+            <Button
+              onClick={onButtonClick}
+              textColor="text-black"
+              bgColor="bg-secondary"
+            >
               {buttonText}
             </Button>
           )}

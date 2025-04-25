@@ -4,23 +4,40 @@ import FAQItem from './FAQItem.jsx'
 const FAQSection = () => {
   const faqData = [
     {
-      question: "Apa itu gaya desain Neo-Brutalisme?",
-      answer: "Neo-Brutalisme adalah gaya desain web modern yang terinspirasi oleh arsitektur Brutalisme. Ciri khasnya meliputi warna solid, kontras tinggi, tipografi tegas, border tebal, shadow keras, dan fokus pada fungsionalitas mentah."
+      question: "Apa itu ZionFest?",
+      answer: "ZionFest adalah platform komunitas dan pusat informasi untuk event musik Reggae, Ska, Dub, dan Roots di Indonesia. Kami bertujuan menyebarkan positive vibes melalui musik dan menghubungkan para pecinta reggae dengan konser-konser berkualitas."
     },
     {
-      question: "Bagaimana cara mengimplementasikannya dengan Tailwind CSS?",
-      answer: "Tailwind menyediakan utility classes yang memudahkan penerapan gaya ini. Gunakan class untuk border tebal (border-2, border-4), warna solid (bg-warna, text-warna), shadow custom (shadow-[...]), dan font (font-bold, font-mono)."
+      question: "Bagaimana cara membeli tiket konser di ZionFest?",
+      answer: "Sangat mudah! Cukup cari konser yang Anda inginkan di halaman 'Ticket Center' atau 'Schedule'. Klik tombol 'View Details' atau 'Get Tickets', pilih jenis tiket yang tersedia, lalu ikuti proses checkout (saat ini masih dalam tahap simulasi)."
     },
     {
-      question: "Apakah ini cocok untuk semua jenis website?",
-      answer: "Gaya ini sangat mencolok dan mungkin tidak cocok untuk semua brand atau tujuan website. Cocok untuk proyek yang ingin tampil beda, artistik, atau menonjolkan kesan 'digital' dan 'jujur'."
+      question: "Tiket yang saya inginkan bertuliskan 'Sold Out'. Apakah benar-benar sudah habis?",
+      answer: "Ya, status 'Sold Out' berarti semua alokasi tiket untuk kategori tersebut sudah habis terjual melalui platform kami. Kami tidak memiliki tiket tambahan. Coba periksa kategori tiket lain atau event lainnya!"
     },
     {
-      question: "Bagaimana dengan aksesibilitas?",
-      answer: "Penting untuk tetap memperhatikan aksesibilitas. Gunakan kontras warna yang cukup (meskipun tinggi), struktur HTML semantik (seperti <button> untuk elemen interaktif), dan atribut ARIA yang sesuai (aria-expanded, aria-controls) untuk komponen seperti akordion FAQ ini."
+      question: "Apakah tiket yang sudah dibeli bisa di-refund atau dipindahtangankan?",
+      answer: "Umumnya, tiket yang sudah dibeli bersifat *non-refundable* (tidak dapat dikembalikan dananya) kecuali ada pembatalan atau penjadwalan ulang event oleh pihak penyelenggara. Kebijakan pemindahtanganan (transfer) tiket mungkin berbeda-beda tergantung event, silakan cek syarat & ketentuan pada detail konser."
+    },
+    {
+      question: "Di mana saya bisa melihat jadwal lengkap dan lineup (daftar penampil) konser?",
+      answer: "Anda bisa melihat jadwal konser mendatang di halaman 'Schedule'. Untuk lineup detail dan rundown acara spesifik, silakan lihat pada halaman detail masing-masing konser yang Anda minati."
+    },
+    {
+      question: "Barang apa saja yang biasanya dilarang dibawa masuk ke area konser?",
+      answer: "Setiap event mungkin memiliki aturan spesifik, namun umumnya barang yang dilarang meliputi senjata tajam/api, obat-obatan terlarang, minuman beralkohol dari luar, makanan/minuman dari luar, kamera profesional tanpa izin, dan barang berbahaya lainnya. Selalu periksa detail aturan di halaman konser."
+    },
+    {
+      question: "Apakah ada batasan usia untuk menghadiri konser?",
+      answer: "Batasan usia bisa bervariasi tergantung pada kebijakan venue dan penyelenggara event. Beberapa event mungkin khusus dewasa (18+ atau 21+), sementara yang lain terbuka untuk semua umur (mungkin dengan pendampingan orang tua untuk anak-anak). Informasi ini biasanya tertera jelas di detail tiket atau halaman informasi konser."
+    },
+    {
+      question: "Bagaimana cara mengetahui informasi tentang akses ke venue (lokasi) dan parkir?",
+      answer: "Informasi mengenai alamat lengkap venue, peta lokasi (jika tersedia), pilihan transportasi umum terdekat, dan detail area parkir biasanya dapat ditemukan pada halaman detail setiap konser. Kami sarankan untuk memeriksanya sebelum hari H."
     }
-    // Tambahkan pertanyaan dan jawaban lain di sini
+
   ];
+
 
   return (
     // Background Section TRANSPARAN, Border Hitam, Responsive Padding & Max Width

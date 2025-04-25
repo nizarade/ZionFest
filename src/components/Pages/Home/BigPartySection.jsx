@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import VersatileCard from "../../VersatileCard";
 import BigPartyImage1 from "../../../assets/bigParty_img_1.png";
 import BigPartyImage2 from "../../../assets/bigParty_img_2.png";
 import BigPartyImage3 from "../../../assets/bigParty_img_3.png";
 
 const BigPartySection = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-center text-center md:text-start pb-10">
       <p className="text-2xl md:text-4xl font-medium mb-5">
@@ -17,20 +19,23 @@ const BigPartySection = () => {
 
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
         <VersatileCard
+          onClick={() => navigate("/schedule")}
           variant="imageOnly"
           imageUrl={BigPartyImage1}
           altText="Gitaris reggae solo dengan dreadlocks"
         />
         <VersatileCard
+          onClick={() => navigate("/schedule")}
           variant="imageOnly"
           imageUrl={BigPartyImage2}
           altText="Band reggae berbaris dengan latar belakang warna-warni
-"  
+"
         />
         <VersatileCard
+          onClick={"schedule"}
           variant="imageOnly"
           imageUrl={BigPartyImage3}
-          altText="Band reggae di panggung dengan drummer"  
+          altText="Band reggae di panggung dengan drummer"
         />
       </div>
     </div>
