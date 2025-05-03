@@ -142,8 +142,8 @@ const CalendarSection = () => {
           <h3 className="text-2xl font-bold text-black mb-3">
             {/* Judul dinamis berdasarkan ada tidaknya konser */}
             {selectedConcerts.length > 0
-              ? `Konser pada ${selectedConcerts[0].date}`
-              : "Detail Konser"}
+              ? `Concerts at ${selectedConcerts[0].date}`
+              : "Detail Concert"}
           </h3>
         </div>
         {selectedConcerts.length > 0 ? (
@@ -166,7 +166,7 @@ const CalendarSection = () => {
                 </p>
                 {/* Tidak perlu menampilkan tanggal lagi karena sudah di judul */}
                 <p className="text-black">
-                  <span className="font-medium">Waktu:</span> {concert.time}
+                  <span className="font-medium">Time:</span> {concert.time}
                 </p>
                 <p className="text-black">
                   <span className="font-medium">Venue:</span>{" "}
@@ -182,13 +182,13 @@ const CalendarSection = () => {
                     if (cheapestPrice !== null) {
                       return (
                         <p className="font-medium text-secondary">
-                          Mulai dari: {formatPrice(cheapestPrice)}
+                          Start from: {formatPrice(cheapestPrice)}
                         </p>
                       );
                     } else {
                       return (
                         <p className="font-medium text-warning">
-                          Tiket Habis Terjual
+                          Tickets Sold Out
                         </p>
                       );
                     }
@@ -203,7 +203,7 @@ const CalendarSection = () => {
                       textColor="text-black"
                       className="bg-primary text text-black border-2 border-black px-4 py-2 font-bold shadow-[3px_3px_0_#111111] transition-all duration-100 ease-in-out hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0_#111111] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
                     >
-                      Lihat Detail Tiket
+                      View Details
                     </Button>
                   </Link>
                 )}

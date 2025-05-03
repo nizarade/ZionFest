@@ -9,7 +9,6 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <AppContextProvider>
       <div className="bg-[#17A15F] w-full h-full">
-
         <App />
       </div>
     </AppContextProvider>

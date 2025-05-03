@@ -7,7 +7,7 @@ const AboutSection = () => {
 
   const handleClick = () => {
     console.log("Tombol diklik, mengarahkan ke halaman tickets...");
-    navigate("/tickets");
+    navigate("/ticketCenter");
   };
   return (
     // Section container dengan padding responsif dan background netral

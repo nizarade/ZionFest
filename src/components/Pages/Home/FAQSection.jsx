@@ -2,41 +2,40 @@ import React from 'react';
 import FAQItem from './FAQItem.jsx'
 
 const FAQSection = () => {
-  const faqData = [
-    {
-      question: "Apa itu ZionFest?",
-      answer: "ZionFest adalah platform komunitas dan pusat informasi untuk event musik Reggae, Ska, Dub, dan Roots di Indonesia. Kami bertujuan menyebarkan positive vibes melalui musik dan menghubungkan para pecinta reggae dengan konser-konser berkualitas."
-    },
-    {
-      question: "Bagaimana cara membeli tiket konser di ZionFest?",
-      answer: "Sangat mudah! Cukup cari konser yang Anda inginkan di halaman 'Ticket Center' atau 'Schedule'. Klik tombol 'View Details' atau 'Get Tickets', pilih jenis tiket yang tersedia, lalu ikuti proses checkout (saat ini masih dalam tahap simulasi)."
-    },
-    {
-      question: "Tiket yang saya inginkan bertuliskan 'Sold Out'. Apakah benar-benar sudah habis?",
-      answer: "Ya, status 'Sold Out' berarti semua alokasi tiket untuk kategori tersebut sudah habis terjual melalui platform kami. Kami tidak memiliki tiket tambahan. Coba periksa kategori tiket lain atau event lainnya!"
-    },
-    {
-      question: "Apakah tiket yang sudah dibeli bisa di-refund atau dipindahtangankan?",
-      answer: "Umumnya, tiket yang sudah dibeli bersifat *non-refundable* (tidak dapat dikembalikan dananya) kecuali ada pembatalan atau penjadwalan ulang event oleh pihak penyelenggara. Kebijakan pemindahtanganan (transfer) tiket mungkin berbeda-beda tergantung event, silakan cek syarat & ketentuan pada detail konser."
-    },
-    {
-      question: "Di mana saya bisa melihat jadwal lengkap dan lineup (daftar penampil) konser?",
-      answer: "Anda bisa melihat jadwal konser mendatang di halaman 'Schedule'. Untuk lineup detail dan rundown acara spesifik, silakan lihat pada halaman detail masing-masing konser yang Anda minati."
-    },
-    {
-      question: "Barang apa saja yang biasanya dilarang dibawa masuk ke area konser?",
-      answer: "Setiap event mungkin memiliki aturan spesifik, namun umumnya barang yang dilarang meliputi senjata tajam/api, obat-obatan terlarang, minuman beralkohol dari luar, makanan/minuman dari luar, kamera profesional tanpa izin, dan barang berbahaya lainnya. Selalu periksa detail aturan di halaman konser."
-    },
-    {
-      question: "Apakah ada batasan usia untuk menghadiri konser?",
-      answer: "Batasan usia bisa bervariasi tergantung pada kebijakan venue dan penyelenggara event. Beberapa event mungkin khusus dewasa (18+ atau 21+), sementara yang lain terbuka untuk semua umur (mungkin dengan pendampingan orang tua untuk anak-anak). Informasi ini biasanya tertera jelas di detail tiket atau halaman informasi konser."
-    },
-    {
-      question: "Bagaimana cara mengetahui informasi tentang akses ke venue (lokasi) dan parkir?",
-      answer: "Informasi mengenai alamat lengkap venue, peta lokasi (jika tersedia), pilihan transportasi umum terdekat, dan detail area parkir biasanya dapat ditemukan pada halaman detail setiap konser. Kami sarankan untuk memeriksanya sebelum hari H."
-    }
-
-  ];
+ const faqData = [
+  {
+    question: "What is ZionFest?",
+    answer: "ZionFest is a community platform and information hub for Reggae, Ska, Dub, and Roots music events in Indonesia. We aim to spread positive vibes through music and connect reggae lovers with quality concerts."
+  },
+  {
+    question: "How can I buy concert tickets on ZionFest?",
+    answer: "It's easy! Just find the concert you want on the 'Ticket Center' or 'Schedule' page. Click the 'View Details' or 'Get Tickets' button, select an available ticket type, and then follow the checkout process (currently in simulation stage)."
+  },
+  {
+    question: "The ticket I want says 'Sold Out'. Is it really unavailable?",
+    answer: "Yes, the 'Sold Out' status means that all allocated tickets for that specific category have been sold through our platform. We do not hold extra tickets. Try checking other ticket categories or different events!"
+  },
+  {
+    question: "Can purchased tickets be refunded or transferred?",
+    answer: "Generally, purchased tickets are non-refundable unless the event is officially cancelled or rescheduled by the organizer. Ticket transfer policies may vary depending on the event; please check the specific terms & conditions on the concert details page."
+  },
+  {
+    question: "Where can I see the full schedule and lineup for concerts?",
+    answer: "You can find the upcoming concert schedule on the 'Schedule' page. For detailed lineups and specific event rundowns, please refer to the details page of the concert you are interested in."
+  },
+  {
+    question: "What items are typically prohibited from being brought into the concert venue?",
+    answer: "Each event might have specific rules, but commonly prohibited items include weapons, illegal drugs, outside alcoholic beverages, outside food/drinks, professional cameras without permits, and other dangerous items. Always check the specific rules on the concert details page."
+  },
+  {
+    question: "Are there age restrictions for attending concerts?",
+    answer: "Age restrictions can vary depending on the venue and event organizer's policy. Some events might be adults-only (18+ or 21+), while others are open to all ages (potentially requiring parental guidance for minors). This information is usually clearly stated in the ticket details or on the concert information page."
+  },
+  {
+    question: "How can I find information about venue access (location) and parking?",
+    answer: "Information regarding the full venue address, location map (if available), nearby public transportation options, and parking details can usually be found on the details page for each concert. We recommend checking this information before the event day."
+  }
+];
 
 
   return (

@@ -11,6 +11,7 @@ import ReactSlickCarousel from "./components/ReactSlickCarousel";
 import ConcertDetailSection from "./components/Pages/ConcertDetailSection";
 import Schedule from "./components/Pages/Schedule/SchedulePage";
 import NewsPortalSection from "./components/Pages/News/NewsPortalSection";
+import NewsDetailPage from "./components/Pages/News/NewsDetailPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/ticketCenter" element={<Tickets/>} />
           <Route path="/concert/:concertId" element={<ConcertDetailSection />} />
           <Route path="/news" element={<NewsPortalSection />} />
+          <Route path="/news/:slug" element={<NewsDetailPage />} />
           <Route path="/schedule" element={<Schedule />} />
 
         </Routes>

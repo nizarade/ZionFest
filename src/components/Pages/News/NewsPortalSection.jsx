@@ -114,7 +114,7 @@ const NewsPortalSection = () => {
 
 
   return (
-    <section className=" pl-13 pr-4 md:pl-20 md:pr-10 "> {/* Background netral */}
+    <section className=" pl-13 pr-4 mb-10 md:pl-20 md:pr-10 "> {/* Background netral */}
       <div className="max-w-7xl mx-auto">
 
         {/* Judul Section */}

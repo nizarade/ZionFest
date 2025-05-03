@@ -1,13 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 
-// Komponen Kustom untuk Tombol Panah (agar bisa di-style dengan Tailwind)
 const SlickArrow = ({ direction, onClick, icon }) => (
   <button
     className={`absolute top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-black bg-opacity-40 text-white hover:bg-opacity-60 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 ${
       direction === "prev"
         ? "left-[-25px] md:left-[-33px]"
-        : "right-[-25px] md:right-[-33px]" // Sesuaikan posisi panah agar sedikit keluar
+        : "right-[-25px] md:right-[-33px]" 
     }`}
     onClick={onClick}
     aria-label={direction === "prev" ? "Previous Slide" : "Next Slide"}
@@ -17,7 +16,7 @@ const SlickArrow = ({ direction, onClick, icon }) => (
 );
 
 const PrevArrow = (props) => {
-  const { className, style, onClick } = props; // Ambil props default dari react-slick jika diperlukan
+  const { className, style, onClick } = props; 
   return (
     <SlickArrow
       direction="prev"
@@ -43,7 +42,7 @@ const PrevArrow = (props) => {
 };
 
 const NextArrow = (props) => {
-  const { className, style, onClick } = props; // Ambil props default dari react-slick jika diperlukan
+  const { className, style, onClick } = props; 
   return (
     <SlickArrow
       direction="next"
@@ -70,14 +69,13 @@ const NextArrow = (props) => {
 
 // Komponen Carousel Utama
 const ReactSlickCarousel = ({
-  children, // Terima children sebagai prop
+  children, 
   autoplaySpeed = 3000,
-  slidesToShow = 1, // Default 1, akan di-override saat penggunaan
+  slidesToShow = 1, 
   slidesToScroll = 1,
-  showDots = false, // Default false (lebih umum untuk non-hero slider)
+  showDots = false, 
   arrows = true,
-  className = "", // Untuk styling eksternal wrapper
-  // Anda bisa menambahkan props lain untuk mengontrol react-slick jika perlu
+  className = "", 
 }) => {
   // Hitung jumlah children untuk pengaturan 'infinite'
   const childrenCount = React.Children.count(children);
@@ -139,13 +137,7 @@ const ReactSlickCarousel = ({
   return (
     // Wrapper relatif, beri padding untuk panah
     <div className={`relative w-full mx-auto my-8 px-8  ${className}`}>
-      {/* Komentar CSS untuk dots aktif (jika digunakan) */}
-      {/*
-          .slick-dots li.slick-active div { @apply bg-gray-700 scale-110; }
-          .slick-dots li div.slick-dot-inactive:hover { @apply bg-gray-500; }
-        */}
       <Slider {...settings}>
-        {/* Langsung render children yang diberikan */}
         {children}
       </Slider>
     </div>
