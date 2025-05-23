@@ -17,7 +17,7 @@ const AboutSection = () => {
         {/* Blok Judul Utama */}
         <div className="mb-10 md:mb-16 p-6 bg-primary border-2 border-black shadow-[8px_8px_0px_#000000] transition-shadow duration-200 hover:shadow-[10px_10px_0px_#000000]">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-black">
-            Who are <span className="text-secondary">WE</span> !?
+            Who are <span className="text-secondary">WE</span> !!?
           </h1>
           <p className="text-xl md:text-3xl font-medium text-center text-gray-700">
             Hello !!
