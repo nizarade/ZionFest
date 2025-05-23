@@ -1,16 +1,17 @@
 import React from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 import LogoImage from "../../src/assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenu, setIsMobileMenu] = React.useState(false);
 
   const navLinks = [
-    { href: "/", text: "Home" },
-    { href: "about", text: "About" },
-    { href: "news", text: "News" },
-    { href: "ticketCenter", text: "Ticket Center" },
-    { href: "schedule", text: "Schedule" },
+    { to: "/", text: "Home" },
+    { to: "/about", text: "About" },
+    { to: "/news", text: "News" },
+    { to: "/ticketCenter", text: "Ticket Center" },
+    { to: "/schedule", text: "Schedule" },
   ];
 
   const toggleMobileMenu = () => {
@@ -24,13 +25,13 @@ const Navbar = () => {
         {/* Left Icon/Logo Section */}
         <div>
           {/* Desktop Logo */}
-          <a href="/" className="hidden md:block"> {/* Make logo clickable */}
+          <Link href="/" className="hidden md:block"> {/* Make logo clickable */}
             <img
               className="h-14 md:h-16 border-r-4 border-black p-2" // Use height for consistency
               src={LogoImage}
               alt="ZionFest Logo" // Add Alt Text
             />
-          </a>
+          </Link>
           {/* Mobile Menu Button */}
           <div className="flex justify-center items-center md:hidden">
             <button
@@ -59,13 +60,13 @@ const Navbar = () => {
         <div className="hidden md:flex w-full px-5 gap-4 lg:gap-6 overflow-hidden"> {/* Added lg:gap-6 */}
           {navLinks.map((link) => (
             // Use the exact same anchor tag structure and classes
-            <a
+            <Link
               key={link.text}
               className="hover:scale-110 transform transition-all text-black font-medium" // Added text-black, font-medium
-              href={link.href}
+              href={link.to}
             >
               {link.text}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -80,14 +81,14 @@ const Navbar = () => {
            {navLinks.map((link) => (
              // Use the exact same anchor tag structure and classes as desktop
              // But maybe adjust padding/margin for vertical layout
-             <a
+             <Link
                key={link.text}
                className="hover:scale-105 transform transition-all text-black font-medium w-full py-1" // Adjusted hover, added w-full, py-1
-               href={link.href}
+               href={link.to}
                onClick={() => setIsMobileMenu(false)} // Close menu on click
              >
                {link.text}
-             </a>
+             </Link>
            ))}
         </div>
       </div>
