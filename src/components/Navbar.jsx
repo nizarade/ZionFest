@@ -25,7 +25,7 @@ const Navbar = () => {
         {/* Left Icon/Logo Section */}
         <div>
           {/* Desktop Logo */}
-          <Link href="/" className="hidden md:block"> {/* Make logo clickable */}
+          <Link to="/" className="hidden md:block"> {/* Make logo clickable */}
             <img
               className="h-14 md:h-16 border-r-4 border-black p-2" // Use height for consistency
               src={LogoImage}
@@ -63,7 +63,7 @@ const Navbar = () => {
             <Link
               key={link.text}
               className="hover:scale-110 transform transition-all text-black font-medium" // Added text-black, font-medium
-              href={link.to}
+              to={link.to}
             >
               {link.text}
             </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
              <Link
                key={link.text}
                className="hover:scale-105 transform transition-all text-black font-medium w-full py-1" // Adjusted hover, added w-full, py-1
-               href={link.to}
+               to={link.to}
                onClick={() => setIsMobileMenu(false)} // Close menu on click
              >
                {link.text}
