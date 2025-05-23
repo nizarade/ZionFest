@@ -7,10 +7,10 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
-    { href: "/news", text: "News" },
-    { href: "/ticketCenter", text: "Ticket Center" },
-    { href: "/schedule", text: "Schedule" },
+    { href: "about", text: "About" },
+    { href: "news", text: "News" },
+    { href: "ticketCenter", text: "Ticket Center" },
+    { href: "schedule", text: "Schedule" },
   ];
 
   const toggleMobileMenu = () => {
